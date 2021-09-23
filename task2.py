@@ -31,3 +31,27 @@ Enter a number: 8
 Enter a number: 64
 64 is both a perfect square and a perfect cube.
 """
+import math
+
+
+number = input("Enter a number:")
+number = float(number)
+
+squarecheck = math.sqrt(number)
+squarecheck = round(squarecheck, 2)
+
+cubecheck = number**1/3
+cubecheck = round(cubecheck)
+
+print(squarecheck)
+print(cubecheck)
+
+if float(squarecheck).is_integer() and float(cubecheck).is_integer():
+    print(f"{number} is both a perfect square and a perfect cube.")
+
+elif float(squarecheck).is_integer():
+    print(f"{number} is only a perfect square.")
+
+elif float(cubecheck).is_integer():
+    print(f"{number} is only a perfect cube.")
+
