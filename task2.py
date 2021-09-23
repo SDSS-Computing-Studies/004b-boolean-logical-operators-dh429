@@ -40,8 +40,11 @@ number = float(number)
 squarecheck = math.sqrt(number)
 squarecheck = round(squarecheck, 2)
 
-cubecheck = number**1/3
-cubecheck = round(cubecheck)
+cubecheck = number**0.33333333333
+cubecheck = round(cubecheck, 2)
+
+print(squarecheck)
+print(cubecheck)
 
 if float(squarecheck).is_integer() and float(cubecheck).is_integer():
     print(f"{number} is both a perfect square and a perfect cube.")
