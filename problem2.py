@@ -26,3 +26,20 @@ Enter a number: 4
 Enter another number: 25
 4 is not a factor of 25
 """
+number1 = input("Enter a number:")
+number1 = float(number1)
+
+number2 = input("Enter another number:")
+number2 = float(number2)
+
+bignum = max(number1 , number2)
+
+smallnum = min(number1 , number2)
+
+divicheck = bignum % smallnum
+
+if divicheck == 0:
+    print(f"{smallnum} is a factor of {bignum}")
+
+else:
+    print(f"{smallnum} is not a factor of {bignum}")
