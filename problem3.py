@@ -30,3 +30,31 @@ Enter an integer=>4
 Enter an integer=>2
 2,4,5 do not form a Pythagorean triple
 """
+
+number1 = input("Enter an integer=>")
+number1 = float(number1)
+
+number2 = input("Enter an integer=>")
+number2 = float(number2)
+
+number3 = input("Enter an integer=>")
+number3 = float(number3)
+
+bignum = max(number1, number2, number3)
+
+smallnum = min(number1 , number2, number3)
+
+if number1 < bignum and number1 > smallnum:
+    midnum = number1
+
+elif number2 < bignum and number2 > smallnum:
+    midnum = number2
+
+elif number3 < bignum and number3 > smallnum:
+    midnum = number3
+
+if smallnum**2 + midnum**2 == bignum**2:
+    print(f"{smallnum},{midnum},{bignum} form a Pythagorean triple")
+
+else:
+    print(f"{smallnum},{midnum},{bignum} do not form a Pythagorean triple")
